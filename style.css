@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:cursive;
+ }
+body {
+    background-image: url(back-min.jpg);
+    background-position: center;
+    height: 100vh;
+}
+.game-board {
+    width: 1000px;
+	position: relative;
+    top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+    background-color: #fff;
+    height: 600px;
+	border-style:solid;
+	border-width:10px;
+	border-color: #000410;
+}
+.player-0-panel {
+	background-color: white;
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.player-1-panel {
+	background-color: white;
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.player-name {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 20% 25%;
+	position: relative;
+	display: block;
+	width: 50%;
+	height: 10%;
+	background-color: black;
+	color: white;
+}
+
+.player-score {
+    font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 20% 25%;
+	position: relative;
+	display: block;
+	width: 20%;
+	height: 10%;
+	margin-left: 40%;
+	color: black;
+	border-style: solid;
+	border-color: #fc3f07;
+}
+
+.player-current-box {
+	background-color: #EB4D4D;
+    text-transform: capitalize;
+	letter-spacing: 2px;
+	display: block;
+	height: 18%;
+	width: 50%;
+	border-style: solid;
+	border-color: black;
+	margin-left: 25%;
+}
+
+.player-current {
+	font-size: 40px;
+	margin-left: 17%;
+}
+
+.player-current-score{
+   font-size: 40px;
+   margin-left: 40%;
+}
+
+.dice{
+    position: absolute;
+	top:16%;
+	left:45%;
+	height: 100px;
+	width: 100px;
+	border-style: solid;
+}
+
+.btn{
+    position: absolute;
+	top:5%;
+	left:45%;
+	height: 40px;
+	width: 105px;
+}
+.btn:hover,.btn:active{
+	background-color: rgba(128, 128, 128, 0.72);
+	left: 45.5%;
+}
+.btn-roll{top:390px;}
+.btn-hold{top:450px;}
+
+.final-score{
+	position: absolute;
+	top:520px;
+	left: 420px;
+	height: 54px;
+	width: 170px;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+}
+
+.active { background-color: gainsboro; }
+.active .player-name:after {
+    content: "\2023";
+    font-size: 90px;
+    position: absolute;
+    color: #EB4D4D;
+    top:-40px;
+	right:250px
+}
+
+.winner { background-color: rgba(255, 255, 0, 0.71); }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
