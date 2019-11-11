@@ -1,20 +1,20 @@
-var tscore,activePlayer,cur,gameplaying;
+var tscore,activePlayer=0,cur,gameplaying;
 init();
 
 function init(){
     tscore=[0,0];
-	activePlayer=cur=0;
+	cur=0;
 	gameplaying=true;
     document.getElementById('score-0').textContent='0';
     document.getElementById('current-0').textContent='0';
     document.getElementById('score-1').textContent='0';
     document.getElementById('current-1').textContent='0';
-	document.querySelector('.final-score').value='FINAL SCORE';
+    document.querySelector('.final-score').value='FINAL SCORE';
 }
 
 document.querySelector('.btn-new').addEventListener('click',function(){
 	var x=(activePlayer===0)?1:2;	
-	        document.getElementById('name-'+activePlayer).textContent='PLAYER '+x;
+	                document.getElementById('name-'+activePlayer).textContent='PLAYER '+x;
 			document.querySelector('.player-'+activePlayer+'-panel').classList.remove('winner');
 			document.querySelector('.player-'+activePlayer+'-panel').classList.add('active');
 	init();
@@ -45,7 +45,7 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
 	tscore[activePlayer]+=cur;
 	document.getElementById('score-'+activePlayer).textContent=tscore[activePlayer];
 	        if(tscore[activePlayer]>=20){
-				document.getElementById('name-'+activePlayer).textContent='WINNER !';
+			document.getElementById('name-'+activePlayer).textContent='WINNER !';
 			document.querySelector('.player-'+activePlayer+'-panel').classList.add('winner');
 			document.querySelector('.player-'+activePlayer+'-panel').classList.remove('active');
 			document.querySelector('.final-score').value='WON BY '+tscore[activePlayer];
