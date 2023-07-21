@@ -1,7 +1,5 @@
 # WebGame-HTML5-CSS3-JS
 
-<b>This is Simple Dice game resembling Web App made from HTML5 , CSS3 and JAVASCRIPT. There are no templates used , all made from raw code. Download the code and run the dice game on your browser</b> 
-
 ![](overview.png)
 
 Rules for Winning
